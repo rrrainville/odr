@@ -1,0 +1,29 @@
+body{
+	padding-top: 51px;
+}
+
+a:hover{
+	cursor: pointer;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus
+{
+    width: 100%; /* Equal width (5 icons with 20% width each = 100%) */   
+}
+
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 12%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 24px; /* Increased font size */
+}
+
+.breadcrumb {
+	background-color: #fff;
+}
+
+
+
