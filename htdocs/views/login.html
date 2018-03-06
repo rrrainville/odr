@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ottawa Dog Rescue - Management System</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/toaster.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]><link href= "css/bootstrap-theme.css"rel= "stylesheet" >
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Ottawa Dog Rescue</a>
+            </div>
+            <ul class="nav navbar-nav icon-bar">
+                <li class="active">
+                    <a href="#" title="Dashboard">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Animals">
+                        <i class="fa fa-paw"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="People">
+                        <i class="fa fa-address-card-o"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Veterinary">
+                        <i class="fa fa-medkit"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Tasks">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Events">
+                        <i class="fa fa-calendar"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Inventory">
+                        <i class="fa fa-archive"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Finances">
+                        <i class="fa fa-money"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Documents">
+                        <i class="fa fa-file-text"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Reports">
+                        <i class="fa fa-print"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Settings">
+                        <i class="fa fa-cogs"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="fa fa-user"></span> Sign Up</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-sign-in"></span> Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top:20px;">
+
+
+        <div class="page-content">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-lock"></i> Login
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="space-6"></div>
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div id="login-box" class="visible no-border">
+                                <div class="space-16"></div>
+
+                                <form name="loginForm" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="email"> Email / Phone </label>
+                                        <div class="col-sm-7">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Email / Phone" name="email" ng-model="login.email" required focus/>
+                                                <span class="input-group-addon" id="sizing-addon2">
+                                                    <i class="fa fa-user"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="password"> Password </label>
+                                        <div class="col-sm-7">
+                                            <div class="input-group">
+                                                <input type="password" class="form-control" placeholder="Password" ng-model="login.password" required/>
+                                                <span class="input-group-addon" id="sizing-addon2">
+                                                    <i class="fa fa-lock"></i>
+                                                </span>
+                                            </div>
+                                            <a href="#/forgot">Forgot your password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                    <div class="clearfix">
+                                        <div class="row">
+                                            <label class="col-sm-3 control-label no-padding-right"> </label>
+                                            <div class="col-sm-7">
+                                                <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid">
+                                                    <i class="fa fa-key"></i>
+                                                    Login
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-4"></div>
+                                    <span class="lbl col-sm-3"> </span>
+                                </form>
+                            </div>
+                            <!-- /login-box -->
+                        </div>
+                        <!-- /position-relative -->
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    Don't have an account?
+                    <a href="#/signup">Signup</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.page-content -->
+
+
+    </div>
+</body>
+<toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
+<!-- Libs -->
+
+</html>
