@@ -21,5 +21,13 @@ a:hover{
 	background-color: #fff;
 }
 
+.announcement-heading {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.announcement-text {
+    font-size: 120%;
+}
 
 

@@ -1,550 +1,438 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="#/">Home</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+  </ol>
+</nav>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ottawa Dog Rescue - Management System</title>
-  <link rel="icon" 
-    type="image/png" 
-    href="icon.png">
-
-  <!-- Bootstrap -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/custom.css" rel="stylesheet">
-  <link href="../css/toaster.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]><link href= "css/bootstrap-theme.css"rel= "stylesheet" >
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Ottawa Dog Rescue</a>
-      </div>
-      <ul class="nav navbar-nav icon-bar">
-        <li class="active">
-          <a href="#" title="Dashboard">
-            <i class="fa fa-home"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Animals">
-            <i class="fa fa-paw"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="People">
-            <i class="fa fa-address-card-o"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Veterinary">
-            <i class="fa fa-medkit"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Tasks">
-            <i class="fa fa-tasks"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Events">
-            <i class="fa fa-calendar"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Inventory">
-            <i class="fa fa-archive"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Finances">
-            <i class="fa fa-money"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Documents">
-            <i class="fa fa-file-text"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Reports">
-            <i class="fa fa-print"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Settings">
-            <i class="fa fa-cogs"></i>
-          </a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#">
-            <span class="fa fa-user"></span> Sign Up</a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="fa fa-sign-in"></span> Login</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container" style="margin-top:20px;">
-
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="#">Home</a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-      </ol>
-    </nav>
-
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-4">
-                <i class="fa fa-address-card-o fa-5x"></i>
-              </div>
-              <div class="col-xs-8 text-right">
-                <p class="announcement-heading">1</p>
-                <p class="announcement-text">Contacts</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="panel panel-warning">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-4">
-                <i class="fa fa-paw fa-5x"></i>
-              </div>
-              <div class="col-xs-8 text-right">
-                <p class="announcement-heading">12</p>
-                <p class="announcement-text"> Animals</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-4">
-                <i class="fa fa-envelope fa-5x"></i>
-              </div>
-              <div class="col-xs-8 text-right">
-                <p class="announcement-heading">18</p>
-                <p class="announcement-text">Messages</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-4">
-                <i class="fa fa-money fa-5x"></i>
-              </div>
-              <div class="col-xs-8 text-right">
-                <p class="announcement-heading">$9000</p>
-                <p class="announcement-text">Balance</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-3">
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-6">
-                <i class="fa fa-truck fa-5x"></i>
-              </div>
-              <div class="col-xs-6 text-right">
-                <p class="announcement-heading">2</p>
-                <p class="announcement-text">Transports</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-4">
-                <i class="fa fa-hospital-o fa-5x"></i>
-              </div>
-              <div class="col-xs-8 text-right">
-                <p class="announcement-heading">5</p>
-                <p class="announcement-text">Vet Appointments</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-6">
-                <i class="fa fa-exchange fa-5x"></i>
-              </div>
-              <div class="col-xs-6 text-right">
-                <p class="announcement-heading">2</p>
-                <p class="announcement-text">Intakes</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="panel panel-warning">
-          <div class="panel-heading">
-            <div class="row">
-              <div class="col-xs-4">
-                <i class="fa fa-home fa-5x"></i>
-              </div>
-              <div class="col-xs-8 text-right">
-                <p class="announcement-heading">1</p>
-                <p class="announcement-text">Foster Applications</p>
-              </div>
-            </div>
-          </div>
-          <a href="#">
-            <div class="panel-footer announcement-bottom">
-              <div class="row">
-                <div class="col-xs-6">
-                  Expand
-                </div>
-                <div class="col-xs-6 text-right">
-                  <i class="fa fa-arrow-circle-right"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <div class="panel panel-default">
+<div class="row">
+  <div class="col-lg-3">
+    <div class="panel panel-info">
       <div class="panel-heading">
-        <i class="fa fa-align-justify"></i> To Do List
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-address-card-o fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p class="announcement-heading">1</p>
+            <p class="announcement-text">Contacts</p>
+          </div>
+        </div>
       </div>
-      <div class="panel-body">
-        <table class="table table-responsive-sm table-striped">
-          <thead>
-            <tr>
-              <th>Task</th>
-              <th>Owner</th>
-              <th>Priority</th>
-              <th>Due</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-danger">High</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-primary">Low</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Vet Visit</td>
-              <td>Andrea McCoy</td>
-              <td>
-                <span class="label label-warning">Normal</span>
-              </td>
-              <td>28/03/2018 02:00 PM</td>
-              <td>
-                <button class="btn btn-success">Pending</button>
-              </td>
-              <td style="width:100px">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default fa fa-edit"></button>
-                  <button type="button" class="btn btn-danger fa fa-trash-o"></button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <a href="#/people">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
-
-
   </div>
-</body>
-<toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
-<!-- Libs -->
+  <div class="col-lg-3">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-paw fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p class="announcement-heading">12</p>
+            <p class="announcement-text"> Animals</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/animals">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-envelope fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p class="announcement-heading">18</p>
+            <p class="announcement-text">Messages</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-money fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p class="announcement-heading">$9000</p>
+            <p class="announcement-text">Balance</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-</html>
+  <div class="col-lg-3">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-6">
+            <i class="fa fa-truck fa-5x"></i>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p class="announcement-heading">2</p>
+            <p class="announcement-text">Transports</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-hospital-o fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p class="announcement-heading">5</p>
+            <p class="announcement-text">Vet Appointments</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-6">
+            <i class="fa fa-exchange fa-5x"></i>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p class="announcement-heading">2</p>
+            <p class="announcement-text">Intakes</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-4">
+            <i class="fa fa-home fa-5x"></i>
+          </div>
+          <div class="col-xs-8 text-right">
+            <p class="announcement-heading">1</p>
+            <p class="announcement-text">Foster Applications</p>
+          </div>
+        </div>
+      </div>
+      <a href="#/people">
+        <div class="panel-footer announcement-bottom">
+          <div class="row">
+            <div class="col-xs-6">
+              Expand
+            </div>
+            <div class="col-xs-6 text-right">
+              <i class="fa fa-arrow-circle-right"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- /.row -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-align-justify"></i> To Do List
+  </div>
+  <div class="panel-body">
+    <table class="table table-responsive-sm table-striped">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Owner</th>
+          <th>Priority</th>
+          <th>Due</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-danger">High</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-primary">Low</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Vet Visit</td>
+          <td>Andrea McCoy</td>
+          <td>
+            <span class="label label-warning">Normal</span>
+          </td>
+          <td>28/03/2018 02:00 PM</td>
+          <td>
+            <button class="btn btn-success">Pending</button>
+          </td>
+          <td style="width:100px">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default fa fa-edit"></button>
+              <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

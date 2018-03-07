@@ -1,55 +1,73 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'toaster']);
+var RescueApp = angular.module("RescueApp", ['ngRoute']);
 
-app.config(['$routeProvider',
-  function ($routeProvider) {
-        $routeProvider.
-        when('/login', {
-            title: 'Login',
-            templateUrl: 'partials/login.html',
-            controller: 'authCtrl'
+RescueApp.config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl :   'views/dashboard.html',
+            controller  :   'LoginController'
         })
-            .when('/logout', {
-                title: 'Logout',
-                templateUrl: 'partials/login.html',
-                controller: 'logoutCtrl'
-            })
-            .when('/signup', {
-                title: 'Signup',
-                templateUrl: 'partials/signup.html',
-                controller: 'authCtrl'
-            })
-            .when('/dashboard', {
-                title: 'Dashboard',
-                templateUrl: 'partials/dashboard.html',
-                controller: 'authCtrl'
-            })
-            .when('/', {
-                title: 'Login',
-                templateUrl: 'partials/login.html',
-                controller: 'authCtrl',
-                role: '0'
-            })
-            .otherwise({
-                redirectTo: '/login'
-            });
-  }])
-    .run(function ($rootScope, $location, Data) {
-        $rootScope.$on("$routeChangeStart", function (event, next, current) {
-            $rootScope.authenticated = false;
-            Data.get('session').then(function (results) {
-                if (results.uid) {
-                    $rootScope.authenticated = true;
-                    $rootScope.uid = results.uid;
-                    $rootScope.name = results.name;
-                    $rootScope.email = results.email;
-                } else {
-                    var nextUrl = next.$$route.originalPath;
-                    if (nextUrl == '/signup' || nextUrl == '/login') {
+        
+        .when('/dashboard', {
+            templateUrl :   'views/dashboard.html',
+            controller  :   'LoginController'
+        })
 
-                    } else {
-                        $location.path("/login");
-                    }
-                }
-            });
+        .when('/login', {
+            templateUrl :   'views/login.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/signup', {
+            templateUrl :   'views/signup.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/forgot', {
+            templateUrl :   'views/forgot.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/animals', {
+            templateUrl :   'views/animals/animals.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/animal/:id', {
+            templateUrl :   'views/animals/animal.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/people', {
+            templateUrl :   'views/people/people.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/person/:id', {
+            templateUrl :   'views/people/person.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/vets', {
+            templateUrl :   'views/vets/vets.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/vet/:id', {
+            templateUrl :   'views/vets/vet.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/inventory', {
+            templateUrl :   'views/inventory/inventory.html',
+            controller  :   'LoginController'
+        })
+        
+        .when('/product/:id', {
+            templateUrl :   'views/inventory/product.html',
+            controller  :   'LoginController'
+        })
+        
+        .otherwise({
+            redirectTo :    '/'
         });
-    });
+}]);
