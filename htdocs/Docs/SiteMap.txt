@@ -1,0 +1,84 @@
+Home
+  Animals
+    New Animal
+    Edit Animal
+    View Animal
+    Delete Animal
+    Print List
+    Export List
+  People
+    New Person
+    Edit Person
+    View Person
+    Delete Person
+    Print List
+    Export List
+  Vets
+    New Vet
+    Edit Vet
+    View Vet
+    Delete Vet
+    Print List
+    Export List
+  Tasks
+    New Task
+    Edit Task
+    View Task
+    Delete Task
+    Print List
+    Export List
+  Events
+    New Event
+    Edit Event
+    View Event
+    Delete Event
+    Print List
+    Export List
+  Inventory
+    New Produt
+    Edit Produt
+    View Produt
+    Delete Produt
+    Print List
+    Export List
+  Finances
+    Add Donation
+    Add Payment
+    Edit Donation
+    Edit Payment
+    View Donation
+    View Payment
+    Delete Donation
+    Delete Payment
+    Print List
+    Export List
+  Documents
+    Add Document
+    Open Document
+    Delete Document
+    Print List
+    Export List
+  Reports
+  Settings
+    Organizations
+      New Organization
+      Edit Organization
+      View Organization
+      Delete Organization
+      Print List
+      Export List
+    Users
+      New User
+      Edit User
+      View User
+      Delete User
+      Print List
+      Export List
+    Lists Configuration
+    Security Roles
+      
+  Login
+  Forgot Password
+  SignUp
+  Change Password
+      
