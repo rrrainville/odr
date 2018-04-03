@@ -5,9 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ottawa Dog Rescue - Management System</title>
-  <link rel="icon" 
-    type="image/png" 
-    href="icon.png">
+  <link rel="icon" type="image/png" href="icon.png">
 
   <!-- Bootstrap -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -17,7 +15,16 @@
   <link href="css/toaster.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </head>
+  <!-- helper libraries -->
+  <script src="js/jquery-1.12.2.min.js" type="text/javascript"></script>
+  <!-- Libs -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.min.js"></script>
+
+  <!-- daypilot libraries -->
+  <script src="js/daypilot-all.min.js?v=2018.1.3203" type="text/javascript"></script>
+
+</head>
 
 <body>
   <div class="navbar navbar-inverse navbar-static-top">
@@ -52,7 +59,7 @@
           </a>
         </li>
         <li>
-          <a href="#/" title="Events">
+          <a href="#/events" title="Events">
             <i class="fa fa-calendar"></i>
           </a>
         </li>
@@ -65,19 +72,9 @@
           <a href="#/" title="Finances">
             <i class="fa fa-money"></i>
           </a>
-        </li>
+        </li>                
         <li>
-          <a href="#/" title="Documents">
-            <i class="fa fa-file-text"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#/" title="Reports">
-            <i class="fa fa-print"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#/" title="Settings">
+          <a href="#/admin" title="Settings">
             <i class="fa fa-cogs"></i>
           </a>
         </li>
@@ -102,9 +99,9 @@
   </div>
 </body>
 <toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
-<!-- Libs -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular-route.min.js"></script>
+
 <script src="app/app.js"></script>
 <script src="controllers/loginController.js"></script>
+<script src="controllers/eventController.js"></script>
+
 </html>

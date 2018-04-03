@@ -1,4 +1,4 @@
-var RescueApp = angular.module("RescueApp", ['ngRoute']);
+var RescueApp = angular.module("RescueApp", ['ngRoute','daypilot']);
 
 RescueApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -66,7 +66,72 @@ RescueApp.config(['$routeProvider', function($routeProvider) {
             templateUrl :   'views/inventory/product.html',
             controller  :   'LoginController'
         })
-        
+
+        .when('/events', {
+            templateUrl :   'views/events/events.html',
+            controller  :   'EventController'
+        })
+
+        .when('/event/:id', {
+            templateUrl :   'views/events/event.html',
+            controller  :   'EventController'
+        })
+
+        .when('/admin', {
+            templateUrl :   'views/admin/console.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/users', {
+            templateUrl :   'views/admin/users.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/user/:id', {
+            templateUrl :   'views/admin/user.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/organizations', {
+            templateUrl :   'views/admin/organizations.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/organization/:id', {
+            templateUrl :   'views/admin/organization.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/securityroles', {
+            templateUrl :   'views/admin/securityroles.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/securityrole/:id', {
+            templateUrl :   'views/admin/securityrole.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/reports', {
+            templateUrl :   'views/admin/reports.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/report/:id', {
+            templateUrl :   'views/admin/report.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/documents', {
+            templateUrl :   'views/admin/documents.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/document/:id', {
+            templateUrl :   'views/admin/document.html',
+            controller  :   'LoginController'
+        })
+
         .otherwise({
             redirectTo :    '/'
         });
