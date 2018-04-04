@@ -132,6 +132,36 @@ RescueApp.config(['$routeProvider', function($routeProvider) {
             controller  :   'LoginController'
         })
 
+        .when('/finance', {
+            templateUrl :   'views/finance/summary.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/finance/accounts', {
+            templateUrl :   'views/finance/accounts/accounts.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/finance/account/:id', {
+            templateUrl :   'views/finance/accounts/account.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/donation', {
+            templateUrl :   'views/finance/receivable.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/payment', {
+            templateUrl :   'views/finance/payment.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/transfer', {
+            templateUrl :   'views/finance/transfer.html',
+            controller  :   'LoginController'
+        })
+
         .otherwise({
             redirectTo :    '/'
         });

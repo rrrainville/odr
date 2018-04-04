@@ -5,12 +5,12 @@
                 <a href="#/">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="#/admin">Admin Console</a>
+                <a href="#/finance">Finance</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="#/organizations">Organizations</a>
+                <a href="#/finance/accounts">Accounts</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">New Organization</li>
+            <li class="breadcrumb-item active" aria-current="page">New Account</li>
         </ol>
     </nav>
 </div>
@@ -34,7 +34,7 @@
 <br>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <i class="fa fa-sitemap"></i> Organization Information
+        <i class="fa fa-bank"></i> Account Information
     </div>
     <div class="panel-body">
         <div class="row">
@@ -48,40 +48,29 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Website</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Account Number</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <div class="input-group-addon">
-                                        <i class="fa fa-home"></i>
+                                        #
                                     </div>
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Website">
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Account Number">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+                            <label for="inputPassword3" class="col-sm-2 control-label">Current Balance</label>
                             <div class="col-sm-8">
                                 <div class="input-group">
                                     <div class="input-group-addon">
-                                        <i class="fa fa-envelope"></i>
+                                        $
                                     </div>
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Email">
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Current Balance">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Phone</label>
-                            <div class="col-sm-8">
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Phone">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Address</label>
+                            <label for="inputName" class="col-sm-2 control-label">Description</label>
                             <div class="col-sm-8">
                                 <textarea class="form-control" rows="3"></textarea>
                             </div>
@@ -95,15 +84,19 @@
 <br>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <i class="fa fa-user"></i> Users
+        <i class="fa fa-money"></i> Transactions
     </div>
     <div class="panel-body">
         <div class="row">
-            <div class="col col-md-4 pull-left">
+            <div class="col col-md-10 pull-left">
                 <div class="btn-toolbar" role="toolbar" aria-label="...">
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" title="New" ng-click="go('/user/new')">
-                            <i class="fa fa-plus"></i> New</button>
+                        <button type="button" class="btn btn-default" title="Deposit" ng-click="go('/donation')">
+                            <i class="fa fa-credit-card"></i> New Deposit</button>
+                        <button type="button" class="btn btn-default" title="Withdrawn" ng-click="go('/payment')">
+                            <i class="fa fa-money"></i> New Withdrawn</button>
+                        <button type="button" class="btn btn-default" title="Transfer" ng-click="go('/transfer')">
+                            <i class="fa fa-exchange"></i> New Transfer</button>
                         <button type="button" class="btn btn-default" title="Print List">
                             <i class="fa fa-print"></i> Print</button>
                         <button type="button" class="btn btn-default" title="Export List">
@@ -119,11 +112,11 @@
                     <label class="col-sm-2 control-label no-padding-right"> Show </label>
                     <div class="col-sm-4">
                         <select ng-model="entryLimit" class="form-control">
-                            <option>5</option>
-                            <option>10</option>
-                            <option>20</option>
-                            <option>50</option>
-                            <option>100</option>
+                            <option>This Month</option>
+                            <option>Last Month</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 60 Days</option>
+                            <option>All</option>
                         </select>
                     </div>
 
@@ -145,20 +138,22 @@
             <table class="table table-responsive-sm table-striped">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Role</th>
+                        <th>Transaction ID</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Amount</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Andrea McCoy</td>
-                        <td>andrea@mccoy.com</td>
-                        <td>System Admin</td>
+                        <td>123</td>
+                        <td>Cash Withdraw</td>
+                        <td>03/04/2018</td>
+                        <td>-$ 100.00</td>
                         <td>
-                            <span class="label label-success">Active</span>
+                            <span class="label label-success">Reconciled</span>
                         </td>
                         <td style="width:140px">
                             <div class="btn-group">
@@ -169,11 +164,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Andrea McCoy</td>
-                        <td>andrea@mccoy.com</td>
-                        <td>Volunteer</td>
+                        <td>123</td>
+                        <td>Cash Withdraw</td>
+                        <td>03/04/2018</td>
+                        <td>-$ 100.00</td>
                         <td>
-                            <span class="label label-success">Active</span>
+                            <span class="label label-warning">Pending</span>
                         </td>
                         <td style="width:140px">
                             <div class="btn-group">
@@ -184,11 +180,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Andrea McCoy</td>
-                        <td>andrea@mccoy.com</td>
-                        <td>Finance</td>
+                        <td>123</td>
+                        <td>Paypal transfer</td>
+                        <td>07/04/2018</td>
+                        <td>$ 460.00</td>
                         <td>
-                            <span class="label label-success">Active</span>
+                            <span class="label label-warning">Pending</span>
                         </td>
                         <td style="width:140px">
                             <div class="btn-group">
@@ -199,11 +196,44 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Andrea McCoy</td>
-                        <td>andrea@mccoy.com</td>
-                        <td>Intake</td>
+                        <td>123</td>
+                        <td>Transfer to TD Bank</td>
+                        <td>03/04/2018</td>
+                        <td>-$ 250.00</td>
                         <td>
-                            <span class="label label-success">Active</span>
+                            <span class="label label-success">Processed</span>
+                        </td>
+                        <td style="width:140px">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                <button type="button" class="btn btn-default fa fa-edit"></button>
+                                <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>543</td>
+                        <td>Donation</td>
+                        <td>03/04/2018</td>
+                        <td>$ 150.00</td>
+                        <td>
+                            <span class="label label-success">Reconciled</span>
+                        </td>
+                        <td style="width:140px">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                <button type="button" class="btn btn-default fa fa-edit"></button>
+                                <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>342</td>
+                        <td>Adoption Fee</td>
+                        <td>04/04/2018</td>
+                        <td>$ 300.00</td>
+                        <td>
+                            <span class="label label-alert">Pending</span>
                         </td>
                         <td style="width:140px">
                             <div class="btn-group">

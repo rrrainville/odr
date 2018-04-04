@@ -94,3 +94,118 @@
         </div>
     </div>
 </div>
+
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-sitemap"></i> Organizations
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col col-md-4 pull-left">
+                    <div class="btn-toolbar" role="toolbar" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" title="New" ng-click="go('/organization/new')">
+                                <i class="fa fa-plus"></i> New</button>
+                            <button type="button" class="btn btn-default" title="Print List">
+                                <i class="fa fa-print"></i> Print</button>
+                            <button type="button" class="btn btn-default" title="Export List">
+                                <i class="fa fa-file-excel-o"></i> Export</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col col-md-4 pull-left">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right"> Show </label>
+                        <div class="col-sm-4">
+                            <select ng-model="entryLimit" class="form-control">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 pull-right">
+                    <div class="form-group">
+                        <div class="input-group pull-right">
+                            <input type="text" class="form-control" placeholder="Search" name="email" ng-model="login.email" required focus/>
+                            <span class="input-group-addon" id="sizing-addon2">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <table class="table table-responsive-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ottawa Dog Rescue</td>
+                            <td>admin@ottawadogrescue.com</td>
+                            <td>(613) 123-4567</td>
+                            <td>
+                                <span class="label label-success">Active</span>
+                            </td>
+                            <td style="width:140px">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                    <button type="button" class="btn btn-default fa fa-edit"></button>
+                                    <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="col col-md-4 pull-left">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#/" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/">1</a>
+                            </li>
+                            <li>
+                                <a href="#/">2</a>
+                            </li>
+                            <li>
+                                <a href="#/">3</a>
+                            </li>
+                            <li>
+                                <a href="#/">4</a>
+                            </li>
+                            <li>
+                                <a href="#/">5</a>
+                            </li>
+                            <li>
+                                <a href="#/" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <span>Filtered 7 of 143 total people</span>
+        </div>
+    </div>
