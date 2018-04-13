@@ -4,6 +4,9 @@
             <li class="breadcrumb-item">
                 <a href="#/">Home</a>
             </li>
+            <li class="breadcrumb-item">
+                    <a href="#/activities">Activities</a>
+                </li>
             <li class="breadcrumb-item active" aria-current="page">Events</li>
         </ol>
     </nav>
@@ -13,12 +16,12 @@
     <div class="col col-md-6 pull-left">
         <div class="btn-toolbar" role="toolbar" aria-label="...">
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" title="New" ng-click="go('/event/new')">
+                <button type="button" class="btn btn-default" title="New" ng-click="go('/activities/event/new')">
                     <i class="fa fa-calendar-plus-o"></i> New</button>
                 <button type="button" class="btn btn-default" title="View List" ng-click="changeView('List')">
                     <i class="fa fa-list"></i> View List</button>
                 <button type="button" class="btn btn-default" title="View Calendar" ng-click="changeView('Month')">
-                    <i class="fa fa-calendar"></i> View Calendar</button>
+                    <i class="fa fa-calendar-check-o"></i> View Calendar</button>
                 <button type="button" class="btn btn-default" title="Print List">
                     <i class="fa fa-print"></i> Print</button>
                 <button type="button" class="btn btn-default" title="Export List">
@@ -79,7 +82,7 @@
 <div class="row" ng-show="config.viewType == 'List'">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <i class="fa fa-calendar"></i> Events
+            <i class="fa fa-calendar-check-o"></i> Events
         </div>
         <div class="panel-body">
             <div class="row">

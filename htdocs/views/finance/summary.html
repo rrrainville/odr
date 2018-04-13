@@ -1,0 +1,304 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Finance</li>
+    </ol>
+</nav>
+
+<div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col col-md-10 pull-left">
+                <div class="btn-toolbar" role="toolbar" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" title="Account" ng-click="go('/finance/accounts')">
+                            <i class="fa fa-bank"></i> New Account</button>
+                        <button type="button" class="btn btn-default" title="Deposit" ng-click="go('/donation')">
+                            <i class="fa fa-credit-card"></i> New Deposit</button>
+                        <button type="button" class="btn btn-default" title="Withdrawn" ng-click="go('/payment')">
+                            <i class="fa fa-money"></i> New Withdrawn</button>
+                        <button type="button" class="btn btn-default" title="Transfer" ng-click="go('/transfer')">
+                            <i class="fa fa-exchange"></i> New Transfer</button>
+                        <button type="button" class="btn btn-default" title="Print List">
+                            <i class="fa fa-print"></i> Print</button>
+                        <button type="button" class="btn btn-default" title="Export List">
+                            <i class="fa fa-file-excel-o"></i> Export</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-bank"></i> Accounts
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <table class="table table-responsive-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Balance</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RBC Checking Account</td>
+                                <td>$ 23,456.78</td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PayPal</td>
+                                <td>$ 3,456.78</td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cash</td>
+                                <td>$ 567.89</td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <span>Balance $ 67,890.12</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="fa fa-credit-card fa-5x"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <p class="announcement-heading">$ 45,678.90</p>
+                        <p class="announcement-text"> Deposits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="fa fa-exchange fa-5x"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <p class="announcement-heading">$ 9,876.54</p>
+                        <p class="announcement-text"> Withdraws</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <p class="announcement-heading">$ 12,345.67</p>
+                        <p class="announcement-text"> Balance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-money"></i> Last Transactions
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-6 col-md-4 pull-right">
+                        <div class="form-group">
+                            <div class="input-group pull-right">
+                                <input type="text" class="form-control" placeholder="Search" name="email" ng-model="login.email" required focus/>
+                                <span class="input-group-addon" id="sizing-addon2">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <table class="table table-responsive-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Account</th>
+                                <th>Description</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123</td>
+                                <td>RBC Bank</td>
+                                <td>Cash Withdraw</td>
+                                <td>03/04/2018</td>
+                                <td>-$ 100.00</td>
+                                <td>
+                                    <span class="label label-success">Reconciled</span>
+                                </td>
+                                <td style="width:140px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                        <button type="button" class="btn btn-default fa fa-edit"></button>
+                                        <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>TD Bank</td>
+                                <td>Cash Withdraw</td>
+                                <td>03/04/2018</td>
+                                <td>-$ 100.00</td>
+                                <td>
+                                    <span class="label label-warning">Pending</span>
+                                </td>
+                                <td style="width:140px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                        <button type="button" class="btn btn-default fa fa-edit"></button>
+                                        <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>PayPal</td>
+                                <td>Paypal transfer</td>
+                                <td>07/04/2018</td>
+                                <td>$ 460.00</td>
+                                <td>
+                                    <span class="label label-warning">Pending</span>
+                                </td>
+                                <td style="width:140px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                        <button type="button" class="btn btn-default fa fa-edit"></button>
+                                        <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>RBC Bank</td>
+                                <td>Transfer to TD Bank</td>
+                                <td>03/04/2018</td>
+                                <td>-$ 250.00</td>
+                                <td>
+                                    <span class="label label-success">Processed</span>
+                                </td>
+                                <td style="width:140px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                        <button type="button" class="btn btn-default fa fa-edit"></button>
+                                        <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>543</td>
+                                <td>RBC Bank</td>
+                                <td>Donation</td>
+                                <td>03/04/2018</td>
+                                <td>$ 150.00</td>
+                                <td>
+                                    <span class="label label-success">Reconciled</span>
+                                </td>
+                                <td style="width:140px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                        <button type="button" class="btn btn-default fa fa-edit"></button>
+                                        <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>342</td>
+                                <td>RBC Bank</td>
+                                <td>Adoption Fee</td>
+                                <td>04/04/2018</td>
+                                <td>$ 300.00</td>
+                                <td>
+                                    <span class="label label-warning">Pending</span>
+                                </td>
+                                <td style="width:140px">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default fa fa-search-plus"></button>
+                                        <button type="button" class="btn btn-default fa fa-edit"></button>
+                                        <button type="button" class="btn btn-danger fa fa-trash-o"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="col col-md-4 pull-left">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#/" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#/">1</a>
+                                </li>
+                                <li>
+                                    <a href="#/">2</a>
+                                </li>
+                                <li>
+                                    <a href="#/">3</a>
+                                </li>
+                                <li>
+                                    <a href="#/">4</a>
+                                </li>
+                                <li>
+                                    <a href="#/">5</a>
+                                </li>
+                                <li>
+                                    <a href="#/" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

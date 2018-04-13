@@ -67,16 +67,6 @@ RescueApp.config(['$routeProvider', function($routeProvider) {
             controller  :   'LoginController'
         })
 
-        .when('/events', {
-            templateUrl :   'views/events/events.html',
-            controller  :   'EventController'
-        })
-
-        .when('/event/:id', {
-            templateUrl :   'views/events/event.html',
-            controller  :   'EventController'
-        })
-
         .when('/admin', {
             templateUrl :   'views/admin/console.html',
             controller  :   'LoginController'
@@ -160,6 +150,81 @@ RescueApp.config(['$routeProvider', function($routeProvider) {
         .when('/transfer', {
             templateUrl :   'views/finance/transfer.html',
             controller  :   'LoginController'
+        })
+
+        .when('/activities', {
+            templateUrl :   'views/activities/activities.html',
+            controller  :   'EventController'
+        })
+
+        .when('/activities/appointments', {
+            templateUrl :   'views/activities/appointments/appointments.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/appointment/:id', {
+            templateUrl :   'views/activities/appointments/appointment.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/emails', {
+            templateUrl :   'views/activities/emails/emails.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/email/:id', {
+            templateUrl :   'views/activities/emails/email.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/phonecalls', {
+            templateUrl :   'views/activities/phonecalls/phonecalls.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/phonecall/:id', {
+            templateUrl :   'views/activities/phonecalls/phonecall.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/tasks', {
+            templateUrl :   'views/activities/tasks/tasks.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/task/:id', {
+            templateUrl :   'views/activities/tasks/task.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/transports', {
+            templateUrl :   'views/activities/transports/transports.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/transport/:id', {
+            templateUrl :   'views/activities/transports/transport.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/vetvisits', {
+            templateUrl :   'views/activities/vetvisits/vetvisits.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/vetvisit/:id', {
+            templateUrl :   'views/activities/vetvisits/vetvisit.html',
+            controller  :   'LoginController'
+        })
+
+        .when('/activities/events', {
+            templateUrl :   'views/activities/events/events.html',
+            controller  :   'EventController'
+        })
+
+        .when('/activities/event/:id', {
+            templateUrl :   'views/activities/events/event.html',
+            controller  :   'EventController'
         })
 
         .otherwise({
