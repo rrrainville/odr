@@ -1,4 +1,4 @@
-var RescueApp = angular.module("RescueApp", ['ngRoute','daypilot']);
+var RescueApp = angular.module("RescueApp", ['ngRoute','daypilot','angularUtils.directives.dirPagination']);
 
 RescueApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -84,12 +84,12 @@ RescueApp.config(['$routeProvider', function($routeProvider) {
 
         .when('/organizations', {
             templateUrl :   'views/admin/organizations.html',
-            controller  :   'LoginController'
+            controller  :   'OrganizationController'
         })
 
         .when('/organization/:id', {
             templateUrl :   'views/admin/organization.html',
-            controller  :   'LoginController'
+            controller  :   'OrganizationController'
         })
 
         .when('/securityroles', {
@@ -231,3 +231,10 @@ RescueApp.config(['$routeProvider', function($routeProvider) {
             redirectTo :    '/'
         });
 }]);
+
+RescueApp.filter('startFrom', function() {
+    return function(input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});
